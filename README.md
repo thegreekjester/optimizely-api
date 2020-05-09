@@ -94,20 +94,24 @@ optly.get(['name_of_asset']).result
 Filtering Responses:
 
 ```python
-tests = optly.get(['experiments', 'campaigns'])
+# Returns a filtered list on any key that is available in the asset payload (e.g "status", "metrics", "id" etc.)
+
+tests = optly.get(['experiments', 'campaigns'], all_asset_data=True)
 
 # All running tests
-running_exps_everyone = tests.filter({"status":"running"}).result
+running_tests = tests.filter({"status":"running"}).result
 
 # All running tests with event ID 124124
-experiments_with_event124124 = experiments.filter({"metrics":"124124"}).result
+tests_with_event124124 = tests.filter({"metrics":"124124"}).result
 
 ```
 
 Grab Unique ID's:
 
 ```python
-experiments = optly.get(['experiments'])
+# Returns a list of asset ID's that are included in the provided key 
+
+experiments = optly.get(['experiments'], all_asset_data=True)
 
 running_exps = experiments.filter({"status":"running"})
 
