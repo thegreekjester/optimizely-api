@@ -1,4 +1,4 @@
-# OptlyAPI
+# Optimizely API 
 
 This Python package gives an easy way to interface with Optimizely's REST and Event API's. **NOT OFFICIALLY SUPPORTED BY OPTIMIZELY**
 
@@ -64,6 +64,7 @@ List of available assets that can be requested:
 - Events ('events')
 - Pages ('pages')
 - Features ('features')
+- Campaigns ('campaigns')
 
 
 ```python
