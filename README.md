@@ -131,6 +131,8 @@ Ingest CSV/TSV data
 
 ```python
 """
+Ref: construct_payload method
+
 Parameters:
 -----------
 column_mapping: dict
