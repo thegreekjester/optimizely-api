@@ -141,6 +141,18 @@ Assumes the following:
 Ingest CSV/TSV data 
 
 ```python
+
+# Read customer data in 
+# delimeter either ',' or '\t' 
+
+costumer_data = optly.read_csv('filepath.csv', delimeter=',')
+
+```
+
+Construct Optimizely JSON payload 
+
+```python
+
 """
 Ref: construct_payload method
 
@@ -159,17 +171,6 @@ convert_to_timestamps: bool (default value: False)
 generate_uuids: bool (default value: False)
     Flag to denote whether to generate uuids for each event sent
 """
-# Read customer data in 
-
-optly.read_csv('filepath.csv', delimeter=',')
-```
-
-Construct Optimizely JSON payload 
-
-```python
-# construct the Optimizely approved JSON payload
-
-customer_data = optly.read_csv('filepath.csv', delimeter=',')
 
 # The column mapping attr is static mapping of column headers from customer data --> optimizely id names
 # The keys are optimizely approved, the values are customer specific 
