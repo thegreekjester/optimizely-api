@@ -127,6 +127,17 @@ running_exps_audiences = running_exps.list_ids('metrics').result
 
 ### EVENT API
 
+**No Bearer Token Required** 
+
+Will construct and/or send an event payload that follows the Optimizely EVENT API schema 
+
+Assumes the following: 
+
+- Easy Event Tracking (i.e no need for campaign, experiment, or variation ID's)
+- Any Tags information is a valid JSON object (i.e not stringified) 
+- Any Attributes information is an array of valid JSON objects (i.e not stringified)
+- https://optimizely.github.io/docs/api/event/v1/
+
 Ingest CSV/TSV data 
 
 ```python
