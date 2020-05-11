@@ -160,8 +160,12 @@ Construct Optimizely JSON payload
 
 customer_data = optly.read_csv('filepath.csv', delimeter=',')
 
-# The column mapping gives a static mapping of column headers from customer data --> Optimizely
-# The keys are Optimizely approved, the values are customer specific 
+# The column mapping attr is static mapping of column headers from customer data --> optimizely id names
+# The keys are optimizely approved, the values are customer specific 
+# ** NOTE ** If you don't provide a column mapping, it is assumed you have these exact column names:
+# ['visitor_id', 'tags', 'entity_id', 'type', 'timestamp', 'revenue', 'value', 'uuid', 'attributes']
+# You can provide less column names (i.e not have revenue, tags, attributes etc shown below)
+# Only entity_id, timestamp, and visitor_id columns are required to send events 
 
 column_mapping={'visitor_id':'OPTIMIZELY_ID', 'uuid':'UUID', 
 'entity_id': 'ENTITY_ID', 'timestamp':'ENTITY_TS', 'value': 'ENTITY_VALUE'}
@@ -172,7 +176,7 @@ customer_data.construct_payload(column_mapping=column_mapping)
 # To send the payload, set the send_events parameter to True in the constuct_payload method
 customer_data.construct_payload(column_mapping=column_mapping, send_events=True)
 
-# Convert datetimes into timestamps in milliseconds (if customer times are of datetime type)
+# Convert datetimes into timestamps in milliseconds (if user timestamp data is of datetime type)
 customer_data.construct_payload(column_mapping=column_mapping, convert_to_timestamps=True)
 
 # Generate uuids for each event in the payload
