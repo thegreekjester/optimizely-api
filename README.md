@@ -9,8 +9,8 @@ These instructions will get you up and running using this package in your local 
 ### Prerequisites
 
 - [Python 3.0+](https://www.python.org/downloads/)
-- [Optimizely Project Bearer Token](https://help.optimizely.com/Integrate_Other_Platforms/Generate_a_personal_access_token_in_Optimizely_X_Web)
-- [Optimizely Asset ID's](https://help.optimizely.com/Troubleshoot_Problems/API_Names%3A_Find_masked_IDs_for_troubleshooting)
+- [Optimizely Project Bearer Token](https://help.optimizely.com/Integrate_Other_Platforms/Generate_a_personal_access_token_in_Optimizely_X_Web) for REST API use
+- [Optimizely Asset ID's](https://help.optimizely.com/Troubleshoot_Problems/API_Names%3A_Find_masked_IDs_for_troubleshooting) for EVENT API use
 
 
 ### Installing
