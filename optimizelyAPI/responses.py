@@ -176,9 +176,9 @@ class Response:
                         "uuid": str(uuid), 
                     }
         if revenue is not False: 
-            event_obj['revenue'] = float(revenue) 
+            event_obj['revenue'] = int(revenue) 
         if value is not False: 
-            event_obj['value'] = int(value)
+            event_obj['value'] = float(value)
         if tags is not False:
             event_obj['tags'] = json.loads(tags)
         

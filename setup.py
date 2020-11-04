@@ -1,7 +1,7 @@
 from setuptools import setup 
 
 setup(name='optimizelyAPI',
-      version='0.3',
+      version='0.4',
       description='Optimizely REST and Event API client package',
       packages=['optimizelyAPI'],
       author='Peter Katsos',
