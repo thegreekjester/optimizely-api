@@ -47,7 +47,7 @@ Parameters:
 
     """
 
-optly = OptlyAPI(projectId=232235234, accountId=23266677, token='your_bearer_token_here')
+optly = OptlyAPI(projectId=232235234, accountId=23266677, token='Bearer your_bearer_token_here')
 ```
 
 
